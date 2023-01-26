@@ -1,36 +1,43 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState , useEffect, useRef} from 'react';
 
 function userMove(intervalTime,topValue) {
 
-  const [keyPressed, setKeyPressed] = useState(false);
+  const [eventActive, setEventActive] = useState(false);
   const [marioUp, setMarioUp] = useState(0)
+  // 
+  const ref = useRef();
+  const [bbox, setBbox] = useState({});
 
   function downHandler(event) {
-    setKeyPressed(true)
+    setEventActive(true)
   }
 
   const upHandler = (event) => {
-    setKeyPressed(false)
+    setEventActive(false)
   }
 
   useEffect(() => {
     window.addEventListener("keydown", downHandler);
     window.addEventListener("keyup", upHandler);
+    window.addEventListener("mousedown", downHandler);
+    window.addEventListener("mouseup", upHandler);
     return () => {
       window.removeEventListener("keydown", downHandler);
       window.removeEventListener("keyup", upHandler);
+      window.removeEventListener("mousedown", downHandler);
+      window.removeEventListener("mouseup", upHandler);
     };
   }, []); 
 
   useEffect(()=>{
     const interval = setInterval(() => {
-      if(marioUp==0 & keyPressed){
+      if(marioUp==0 & eventActive){
         setMarioUp(marioUp)
       }else if(marioUp<=topValue){
-        setMarioUp(keyPressed?(marioUp-1):(marioUp+1))
+        setMarioUp(eventActive?(marioUp-1):(marioUp+1))
       }
       else{
-        setMarioUp(keyPressed?(marioUp-1):marioUp)
+        setMarioUp(eventActive?(marioUp-1):marioUp)
       }
     }, intervalTime);
     return () => {
