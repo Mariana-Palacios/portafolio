@@ -1,0 +1,241 @@
+// pixel border
+
+@import '../../../node_modules/pixel-borders/src/styles/pixel-borders.scss';
+@import '../../../node_modules/pixel-borders/src/styles/pixel-borders/pixel-borders-mixins';
+.main{
+    .lakitu{
+        position: absolute;
+        width: 2vw;
+        height: auto;
+        z-index: 100;
+        @include animationUpDowm(lakitu,50px,2s, infinite)
+    }
+    position: absolute;
+    z-index: -10;
+    font-size: $large;
+    background-color: $black;
+    height: 100vh;
+    width: 100vw;
+    color: $white;
+    overflow-y: scroll;
+    .mainMenu{
+        &__name,&__text,.socialMedia{
+            margin:2vh;
+        }
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        min-height: 500px;
+        @include appear(appearName, 0, 1, 3s);
+        &__name{
+            &-letter{
+                width: 22vw;
+                margin: 0px 20px;
+            }
+        }
+        &__button{
+            @include pixel-box($corner-size: 1, $border-size: 4px, $background-color: #0F26F2);
+            color:$white;
+            width: 150px;
+            height: 100px;
+            padding: 3px;
+            font-size: $medium;
+        }
+        .socialMedia__github, .socialMedia__youtube, .socialMedia__linkedin{
+            margin: 0% 5px;
+            font-size: $large;
+            color: $blue;
+        }
+        .socialMedia__github:hover, .socialMedia__youtube:hover, .socialMedia__linkedin:hover{
+            color: white;
+            @include animationUpDowm(animationUpDowmSocialMedial,-5px, 0.1s, null);
+        }
+
+    }
+    .background1{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        min-height: 400px;
+        &__image{
+            position: absolute;
+            width: 100vw;
+            height: auto;
+            bottom: 0;
+            left: 0;
+        }
+        &__gombaFlyBlue{
+            position: absolute;
+            margin-top: -10vw;
+            height: auto;
+            width: 3vw;
+            @include animationUpDowm(animationUpGombaFlyBlue,100px,1s,infinite);
+            &-1{
+                left: 10vw;
+            }
+            &-2{
+                left: 90vw;
+            }
+        }
+        &__blueLines{
+            position: absolute;
+            z-index: -1;
+            width: 60vw;
+            height: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -10vw;
+        }
+
+        &__start{
+            height: auto;
+            width: 4vw;
+            left: 50vw;
+            position: absolute;
+            transform: translateX(-50%);
+            top: 5vw;
+            @include animationUpDowm(animationUpDowmStart,-30px,2s,infinite)
+        }
+        &__piranhaYellow{
+            position: absolute;
+            width: 5vw;
+            height: auto;
+            bottom: 8vw;
+            @include animationUpDowm(animationUpDowmpiranhaYellow,50px,1s,null);
+            &-1{
+                left: 15vw;
+            }
+            &-2{
+                left: 76vw;
+            }
+        }
+        &__pipeline1{
+            position: absolute;
+            height: auto;
+            width: 5vw;
+            bottom: 3.5vw;
+            &:hover{
+                height: 10vh;
+            }
+            &-1{
+                left: 15vw;
+            }
+            &-2{
+                left: 76vw;
+            }
+        }
+        &__fire-1{
+            position: absolute;
+            height: 10vw;
+            width: auto;
+            left: 22.5vw;
+            bottom: 3.5vw;
+            @include changeSize(changeSizeFire1, 0.2s, infinite);
+        }
+        &__fire-2{
+            position: absolute;
+            height: 10vw;
+            width: 5vh;
+            left: 72.3vw;
+            bottom: 3.5vw;
+            @include changeSize(changeSizeFire2, 0.2s, infinite);
+        }
+        &__fish{
+            position: absolute;
+            z-index: 10;
+            bottom: 1vw;
+            left: 54vw;
+            width: 3vw;
+            height: auto;
+            //transform: scaleY(-1);
+            //transition: transform 1.25s;
+            @include semicircularMotion(semicircularMotionFish,2s,10vw)
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    /* estilos para pantallas móviles */
+    .main{
+        font-size: $small;
+        .mainMenu{
+            justify-content: flex-end;
+            &__name{
+                display: flex;
+                flex-direction: column;
+                &-letter{
+                    margin: 10px 0px;
+                    width: 70vw;
+                    height: auto;
+                }
+            }
+            &__button{
+                width: 100px;
+                height: 50px;
+                font-size: medium;
+            }
+        }
+        .background1{
+            &__fish{
+                width: 7vw;
+                height: auto;
+                bottom: 20vw;
+            }
+            &__blueLines{
+                width: 80vw;
+                //top: 20vw;
+            }
+            &__gombaFlyBlue{
+                width: 8vw;
+                margin-top: -40vw;
+                &-1{
+                    left: 0;
+                }
+            }
+            &__start{
+                margin-top: 20%;
+                width: 8vw;
+            }
+            &__piranhaYellow{
+                width: 10vw;
+                height: auto;
+                bottom: 31vw;
+                //@include animationUpDowm(animationUpDowmpiranhaYellow,50px,2s,null);
+                &-1{
+                    left: 22vw;
+                }
+                &-2{
+                    left: 65vw;
+                }
+            }
+            &__pipeline1{
+                bottom: 23.5vw;
+                width: 10vw;
+                height: auto;
+                &:hover{
+                    height: 10vh;
+                }
+                &-1{
+                    left: 22vw;
+                }
+                &-2{
+                    left: 65vw;
+                }
+            }
+            &__fire-1{
+                left: 34vw;
+                width: 7vw;
+                height: auto;
+                bottom: 22vw;
+            }
+            &__fire-2{
+                position: absolute;
+                height: auto;
+                width: 7vw;
+                left: 59vw;
+                bottom: 22vw;
+                @include changeSize(changeSizeFire2, 0.2s, infinite);
+            }
+        }
+    }
+}

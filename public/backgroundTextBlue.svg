@@ -1,0 +1,41 @@
+<svg width="316" height="412" viewBox="0 0 316 412" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="306" height="410" fill="#48EAF6"/>
+<path d="M306 2H307V3H306V2Z" fill="#FFBAAA"/>
+<path d="M304 1H306V3H304V1Z" fill="#FFBAAA"/>
+<rect x="304" y="3" width="3" height="407" fill="#FFBAAA"/>
+<rect x="2" y="410" width="304" height="1" fill="#FFBAAA"/>
+<rect x="1" y="409" width="1" height="1" fill="#FFBAAA"/>
+<path d="M307 10H316V410H307V10Z" fill="black"/>
+<path d="M307 8H315V9H307V8Z" fill="black"/>
+<path d="M307 9H316V10H307V9Z" fill="black"/>
+<path d="M307 410H316V411H307V410Z" fill="black"/>
+<path d="M308 411H316V412H308V411Z" fill="black"/>
+<rect y="2" width="1" height="408" fill="black"/>
+<rect x="307" y="2" width="1" height="408" fill="black"/>
+<rect x="2" width="304" height="1" fill="black"/>
+<rect x="2" y="411" width="304" height="1" fill="black"/>
+<path d="M307 0V2H306V0L307 0Z" fill="black"/>
+<path d="M308 1V2H306V1L308 1Z" fill="black"/>
+<path d="M307 412V410H306V412H307Z" fill="black"/>
+<path d="M308 411V410H306V411H308Z" fill="black"/>
+<path d="M0 1H2V2H0V1Z" fill="black"/>
+<path d="M1 0H2V2H1V0Z" fill="black"/>
+<path d="M1 412L1 410H2V412H1Z" fill="black"/>
+<path d="M0 411L0 410H2V411H0Z" fill="black"/>
+<path d="M7 2H3V3H2V7H3V8H7V7H8V3H7V2Z" fill="black"/>
+<path d="M6 3H4V4H3V6H4V7H6V6H7V4H6V3Z" fill="#93FCEE"/>
+<rect x="4" y="5" width="1" height="1" fill="black"/>
+<rect x="5" y="4" width="1" height="1" fill="black"/>
+<path d="M305 2H301V3H300V7H301V8H305V7H306V3H305V2Z" fill="black"/>
+<path d="M304 3H302V4H301V6H302V7H304V6H305V4H304V3Z" fill="#93FCEE"/>
+<rect x="302" y="5" width="1" height="1" fill="black"/>
+<rect x="303" y="4" width="1" height="1" fill="black"/>
+<path d="M305 404H301V405H300V409H301V410H305V409H306V405H305V404Z" fill="black"/>
+<path d="M304 405H302V406H301V408H302V409H304V408H305V406H304V405Z" fill="#93FCEE"/>
+<rect x="302" y="407" width="1" height="1" fill="black"/>
+<rect x="303" y="406" width="1" height="1" fill="black"/>
+<path d="M7 404H3V405H2V409H3V410H7V409H8V405H7V404Z" fill="black"/>
+<path d="M6 405H4V406H3V408H4V409H6V408H7V406H6V405Z" fill="#93FCEE"/>
+<rect x="4" y="407" width="1" height="1" fill="black"/>
+<rect x="5" y="406" width="1" height="1" fill="black"/>
+</svg>

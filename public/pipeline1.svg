@@ -1,0 +1,31 @@
+<svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_980_15698)">
+<rect width="30" height="400" transform="matrix(-1 0 0 1 31 16)" fill="black"/>
+<rect width="28" height="400" transform="matrix(-1 0 0 1 30 16)" fill="#0F26F2"/>
+<path d="M13 16H2V416H13V16Z" fill="#0BE4F2"/>
+<path d="M20 16H14V416H20V16Z" fill="#0BE4F2"/>
+<path d="M23 16H21V416H23V16Z" fill="#0BE4F2"/>
+<path d="M30 16H28V416H30V16Z" fill="#0BE4F2"/>
+<path d="M27 16H26V416H27V16Z" fill="#0BE4F2"/>
+<path d="M3 16H2V416H3V16Z" fill="black"/>
+<path d="M10 16H9V416H10V16Z" fill="black"/>
+<path d="M12 16H11V416H12V16Z" fill="black"/>
+<path d="M8 16H4V416H8V16Z" fill="black"/>
+</g>
+<rect width="32" height="16" transform="matrix(-1 0 0 1 32 0)" fill="black"/>
+<rect width="30" height="13" transform="matrix(-1 0 0 1 31 1)" fill="#0F26F2"/>
+<path d="M12 2H1V14H12V2Z" fill="#0BE4F2"/>
+<path d="M21 2H13V14H21V2Z" fill="#0BE4F2"/>
+<path d="M24 2H22V14H24V2Z" fill="#0BE4F2"/>
+<path d="M31 2H29V14H31V2Z" fill="#0BE4F2"/>
+<path d="M28 2H27V14H28V2Z" fill="#0BE4F2"/>
+<path d="M2 2H1V14H2V2Z" fill="black"/>
+<path d="M9 2H8V14H9V2Z" fill="black"/>
+<path d="M11 2H10V14H11V2Z" fill="black"/>
+<path d="M7 2H3V14H7V2Z" fill="black"/>
+<defs>
+<clipPath id="clip0_980_15698">
+<rect width="30" height="13" fill="white" transform="matrix(-1 0 0 1 31 16)"/>
+</clipPath>
+</defs>
+</svg>

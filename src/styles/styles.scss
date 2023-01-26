@@ -1,0 +1,21 @@
+@import './variables';
+@import './base';
+@import './animations';
+//components 
+@import './components/aboutMe';
+@import './components/main';
+@import './components/mySkills';
+
+
+// pixel border
+
+@import '../../node_modules/pixel-borders/src/styles/pixel-borders.scss';
+@import '../../node_modules/pixel-borders/src/styles/pixel-borders/pixel-borders-mixins';
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: $silkscreen;
+    //font-size: 40px;
+}
+

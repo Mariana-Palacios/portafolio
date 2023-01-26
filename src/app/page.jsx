@@ -1,91 +1,129 @@
+"use client"; // this is a client component
+import '../styles/styles.css'
+import { useState } from 'react';
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Link from 'next/link'
+import screenSize from '@/hooks/screenSize';
+import imageSlider from '../hooks/imageSlider'
+import followMouse from '@/hooks/followMouse';
+import { FiGithub, FiYoutube, FiLinkedin } from "react-icons/fi";
+import {MARIANA, PALACIOS, background_1, start, pipeline1, fire, blueLines, backgroundSmall1, 
+        blueLinesSmall, fish, fishFlip, lakitu, gombaFlyBlue, gombaBlue, piranhaYellow, piranhaYellowLeft,
+        piranhaYellowRight} from './images'
 
 export default function Home() {
+  const [imageIndex, setImageIndex] = useState([MARIANA, PALACIOS, background_1, start, pipeline1, fire, blueLines]);
+  //get the size of the screen
+  if (screenSize(1)){
+    if (imageIndex[2] != backgroundSmall1){
+      setImageIndex([MARIANA, PALACIOS, backgroundSmall1, start, pipeline1, fire, blueLinesSmall])
+    }
+  }else{
+    if (imageIndex[2] != background_1){
+      setImageIndex([MARIANA, PALACIOS, background_1, start, pipeline1, fire, blueLines])
+    }
+  }
+  //follow lakitu
+  let followMouseStatus = followMouse()
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.jsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="main flex flex-f-d-c">
+      <Image
+        src={lakitu}
+        alt="lakitu"
+        className='lakitu'
+        style={{top:followMouseStatus.y,left:followMouseStatus.x}}
+      />
+      <section className='mainMenu flex flex-f-d-c flex-j-c flex-a-i'>
+        <div className='mainMenu__name flex'>
+          <Image
+            src={imageIndex[0]}
+            alt="MARIANA"
+            className='mainMenu__name-letter'
+          />
+          <Image
+            src={imageIndex[1]}
+            alt="PALACIOS"
+            className='mainMenu__name-letter'
+          />
         </div>
-      </div>
 
-      <div className={styles.center}>
+          <p className='mainMenu__text'>
+            Press play to<br/>
+            enter story mode
+          </p>
+          <Link className='mainMenu__button' href="/aboutMe">start</Link>
+          <p className='mainMenu__text'>
+            Follow me at 
+          </p>
+
+        <div className='socialMedia'>
+          <a href="https://github.com/Mariana-Palacios" ><FiGithub className='socialMedia__github'/></a>
+          <a href="http://" ><FiYoutube className='socialMedia__youtube'/></a>
+          <a href="http://" ><FiLinkedin className='socialMedia__linkedin'/></a>
+        </div>
+      </section>
+      <footer className='background1'>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={imageSlider(500)?gombaFlyBlue:gombaBlue}
+          alt='gombaFlyBlue'
+          className='background1__gombaFlyBlue background1__gombaFlyBlue-1'
         />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <Image
+          src={imageSlider(500)?gombaFlyBlue:gombaBlue}
+          alt='gombaFlyBlue'
+          className='background1__gombaFlyBlue background1__gombaFlyBlue-2' 
+        />
+        <Image
+          src={imageIndex[6]}
+          alt='blueLines'
+          className='background1__blueLines'
+        />
+        <Image
+          src={imageIndex[3]}
+          alt='start'
+          className='background1__start'
+        />
+        <Image
+          src={imageSlider(1000)?piranhaYellow:piranhaYellowLeft}
+          alt="piranhaYellow"
+          className='background1__piranhaYellow background1__piranhaYellow-1'
+        />
+        <Image
+          src={imageSlider(200)?piranhaYellow:piranhaYellowRight}
+          alt="piranhaYellow"
+          className='background1__piranhaYellow background1__piranhaYellow-2'
+        />
+        <Image
+          src={imageIndex[4]}
+          alt='pipeline'
+          className='background1__pipeline1 background1__pipeline1-1'
+        />
+        <Image
+          src={imageIndex[4]}
+          alt='pipeline'
+          className='background1__pipeline1 background1__pipeline1-2'
+        />
+        <Image
+          src={imageIndex[5]}
+          alt='pipeline'
+          className='background1__fire-1'
+        />
+        <Image
+          src={imageIndex[5]}
+          alt='pipeline'
+          className='background1__fire-2'
+        />
+        <Image
+          src={imageSlider(1000)?fish:fishFlip}
+          alt="fish"
+          className='background1__fish'
+        />
+        <Image
+          src={imageIndex[2]}
+          alt="background1"
+          className='background1__image'
+        />
+      </footer>
     </main>
   )
 }

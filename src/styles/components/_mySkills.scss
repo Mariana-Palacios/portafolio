@@ -1,0 +1,92 @@
+.mySkills{
+    background-color: $blue-dark;
+    height: 100vh;
+    width: auto;
+    .background3{
+        position: absolute;
+        height: 10vw;
+        width: auto;
+        bottom: 0;
+        left: 50vw;
+        transform: translateX(-50%);
+    }
+    .seaweed{
+        position: absolute;
+        z-index: 100;
+        bottom: 10vw;
+        height: auto;
+        &-1{
+            left: 70vw;
+        }
+        &-2{
+            left: 30vw;
+        }
+        &-1,&-2{
+            width: 3vw;
+        }
+        &-3{
+            left: 74vw;
+        }
+        &-4{
+            left: 26vw;
+        }
+        &-3,&-4{
+            width: 2vw;
+        }
+    }
+    .spikes{
+        position: absolute;
+        width: 10vw;
+        height: auto;
+        bottom: 0;
+        &-1{
+            left: 0vw;
+        }
+        &-2{
+            left: 90vw;
+        }
+    }
+    .mario{
+        position: relative;
+        left: 50vw;
+        transform: translateX(-50%);
+        &__chapter{
+            position: absolute;
+            width: 5vw;
+            height: auto;
+            z-index: 100;
+        }
+        &__bubble1{
+            position: absolute;
+            height: auto;
+            left: 5vw;
+            width: 0.8vw;
+            @include fallDown(fallDownBubble1,1S,-5vw)
+        }
+        &__bubble2{
+            position: absolute;
+            height: auto;
+            left: 4vw;
+            width: 0.5vw;
+            @include fallDown(fallDownBubble2,0.5S,-3vw)
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .mySkills{
+        .mario{
+            &__chapter{
+                width: 12vw;
+            }
+            &__bubble1{
+                left: 12vw;
+                width: 1vw;
+            }
+            &__bubble2{
+                left: 10vw;
+                width: 0.8vw;
+            }
+        }
+    }
+}

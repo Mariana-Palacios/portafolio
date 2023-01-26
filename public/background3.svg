@@ -1,0 +1,30 @@
+<svg width="1319" height="168" viewBox="0 0 1319 168" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="29" y="1" width="1261" height="168" fill="url(#pattern0)"/>
+<path d="M29 1H1290" stroke="black"/>
+<mask id="mask0_1067_18754" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1289" y="0" width="30" height="170">
+<path d="M1294.67 0.75H1294.92V1V5.41667H1304H1304.25V5.66667V10.0833H1308.67H1308.92V10.3333V14.75H1313.33H1313.58V15V24.0833H1318H1318.25V24.3333V169V169.25H1318H1290H1289.75V169V1V0.75H1290H1294.67Z" fill="#C4C4C4" stroke="black" stroke-width="0.5"/>
+</mask>
+<g mask="url(#mask0_1067_18754)">
+<rect width="28" height="168" transform="matrix(-1 0 0 1 1318 1)" fill="url(#pattern1)"/>
+<path d="M1290 1H1297M1297 5.66667H1306.33M1306.33 10.3333H1311M1313.33 12.6667V22M1318 22V169" stroke="black"/>
+</g>
+<mask id="mask1_1067_18754" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="170">
+<path d="M24.3333 0.75H24.0833V1V5.41667H15H14.75V5.66667V10.0833H10.3333H10.0833V10.3333V14.75H5.66667H5.41667V15V24.0833H1H0.75V24.3333V169V169.25H1H29H29.25V169V1V0.75H29H24.3333Z" fill="#C4C4C4" stroke="black" stroke-width="0.5"/>
+</mask>
+<g mask="url(#mask1_1067_18754)">
+<rect x="1" y="1" width="28" height="168" fill="url(#pattern2)"/>
+<path d="M29 1H22M22 5.66667H12.6667M12.6667 10.3333H8M5.66667 12.6667V22M1 22V169" stroke="black"/>
+</g>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="0.0126883" height="0.0714286">
+<use xlink:href="#image0_1067_18754" transform="scale(0.000396511 0.00297619)"/>
+</pattern>
+<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="0.571429" height="0.0714286">
+<use xlink:href="#image0_1067_18754" transform="scale(0.0178571 0.00297619)"/>
+</pattern>
+<pattern id="pattern2" patternContentUnits="objectBoundingBox" width="0.571429" height="0.0714286">
+<use xlink:href="#image0_1067_18754" transform="scale(0.0178571 0.00297619)"/>
+</pattern>
+<image id="image0_1067_18754" width="32" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABTSURBVHgB7ZZBCgAgCATXvud7fV+J0DEIIbbDDngUBnFFi4gJIgNkJCCBo4C7V3W57adPwHQHQEYC/BRkVQoyDeiws97t1x3QEkrgf4HXfwF9AgsBrhatfNmReQAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
