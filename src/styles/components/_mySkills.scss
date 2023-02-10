@@ -2,6 +2,30 @@
     background-color: $blue-dark;
     height: 100vh;
     width: auto;
+    max-height: 100vh;
+    overflow-y:hidden;
+    &__icons{
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translate(-50%,-10%);
+        z-index: 1000000;
+        .icon{
+            height: auto;
+            width: 4vw;
+            margin: 10px;
+        }
+    }
+    .touchClick{
+        position: absolute;
+        left: 50%;
+        top:10%;
+        transform: translate(-50%,-10%);
+        color: $white;
+        font-size: $large;
+        @include fastDisappear(fastDisappearIcons,0.5s);
+
+    }
     .background3{
         position: absolute;
         height: 10vw;
@@ -9,6 +33,7 @@
         bottom: 0;
         left: 50vw;
         transform: translateX(-50%);
+        z-index: 1000;
     }
     .seaweed{
         position: absolute;
@@ -71,6 +96,99 @@
             @include fallDown(fallDownBubble2,0.5S,-3vw)
         }
     }
+    .fish{
+        position: absolute;
+        //left: -100%;
+        &-1{
+            @include screenView(fish1, 3s,100%, 35%,0 ,0 ,left, 0%)
+        }
+        &-2{
+            @include screenView(fish2, 3s,100%, 40%,0 ,0 ,left, 0%)
+        }
+        &-3{
+            @include screenView(fish3, 3s,100%, 45%,0 ,0 ,left, 0%)
+        }
+        &-4{
+            @include screenView(fish4, 3s,100%, 50%,0 ,0 ,left, 0%)
+        }
+        &-5{
+            @include screenView(fish5, 3s,100%, 55%,0 ,0 ,left, 0%)
+        }
+        &-6{
+            @include screenView(fish6, 3s,100%, 60%,0 ,0 ,left, 0%)
+        }
+        &-7{
+            @include screenView(fish7, 3s,100%, 65%,0 ,0 ,left, 0%)
+        }
+    }
+    .fishLine1{
+        top: 20vh;
+    }
+    .fishLine2{
+        top: 25vh;
+    }
+    .fishLine3{
+        top: 30vh;
+    }
+    .blooper{
+        position: relative;
+        top: 5vw;
+        left: 50%;
+        top: 100vh;
+        z-index: 100;
+        animation-timing-function: cubic-bezier(0, 0, 1, 1);
+        @include blooper(blooper,3s,1deg,-1deg,-40vw,-50%, 3s);
+        width: 50vw;
+        height: auto;
+        &__body{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 32vw;
+            height: auto;
+        }
+        &__eye{
+            position: absolute;
+            width: 5.5vw;
+            height: auto;
+            &-1{
+                left: 39%;
+                margin-top: 50%;
+                transform: translateX(-39%);
+            }
+            &-2{
+                left: 65%;
+                margin-top: 50%;
+                transform: translateX(-65%);
+            }
+        }
+        &__tentacule{
+            @include sideBySide(tentacule,3s,-3vw);
+            &-1,&-2,&-3,&-4{
+                position: absolute;
+            }
+            &-1{
+                right: 0;
+                bottom: -40vw;
+                @include animationUpDowm(tentacle1,-7vw, 2s, infinite);
+            }
+            &-2{
+                left: 5vw;
+                bottom: -38vw;
+                @include animationUpDowm(tentacle2,-6vw, 3s, infinite);
+            }
+            &-3{
+                left: -2vw;
+                bottom: -40vw;
+                @include animationUpDowm(tentacle3,-7vw, 6s, infinite);
+            }
+            &-4{
+                right: -8vw;
+                bottom: -40vw;
+                @include animationUpDowm(tentacle4,-8vw, 5s, infinite);
+            }
+        }
+    }
 }
 
 @media (max-width: 1000px) {
@@ -86,6 +204,13 @@
             &__bubble2{
                 left: 10vw;
                 width: 0.8vw;
+            }
+        }
+        .blooper{
+            //@include blooper(blooper,3s,1deg,-1deg,-25vh,-50%, 3s);
+            @include blooper(blooper,3s,1deg,-1deg,-55vw,-50%, 3s);
+            &__body{
+                width: 45vw;
             }
         }
     }

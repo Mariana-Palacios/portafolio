@@ -28,7 +28,7 @@
         left: 60%;
         transform: translateX(-60%);
         bottom: 15vw;
-        @include tilt(backgroundTextBlueContainer,3s,2deg,-2deg,15vw);
+        @include tilt(backgroundTextBlueContainer,3s,2deg,-2deg,15vw,-60%);
         &__text{
             position: absolute;
             width: 80%;
@@ -185,7 +185,7 @@
             top: 50%;
             transform: translate(-50%,-50%);
             bottom: inherit; /* o initial */
-            @include tilt(backgroundTextBlueContainer,3s,2deg,-2deg,30vw);
+            @include tilt(backgroundTextBlueContainer,3s,2deg,-2deg,30vw,-60%);
             &__text{
                 font-size: 12px;
             }

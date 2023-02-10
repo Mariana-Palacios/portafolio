@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {imageSlider, screenSize} from '../../hooks/hooks'
 
+import Level from '../components/level'
 import {gomba, gombaFlip, gombaFly, branch, coin, chomp, background2, backgroundLeft2, pipeline1, cloud,
      cloudSmall, koopa, koopaFly, bombOmb, pipelineBomb, backgroundTextBlue, backgroundBlue, PButton,
      chainLink, wood} from '../../app/images'
@@ -15,6 +16,7 @@ export default function Home() {
     const screenSizeStatus = screenSize()
     return (
         <main className='aboutMe'>
+            <Level numberLevel="1" nameSection="ABOUT ME"/>
             <div className='arrows flex flex-j-s-b'>
                 <Link href="/"><TbArrowBigLeftLines className='arrows__rigth'/></Link>
                 <Link href="/mySkills"><TbArrowBigRightLines className='arrows__left'/></Link>

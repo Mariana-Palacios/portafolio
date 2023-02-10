@@ -63,43 +63,44 @@
     animation: #{$animationName} $time ease-in-out infinite;
 }
 
-@mixin tilt($animationName,$time,$start,$end, $distance){
+@mixin tilt($animationName,$time,$start,$end, $distance, $translateX){
     @keyframes #{$animationName} {
         0% {
-          transform: rotate(0) translateY(calc($distance/10)*10) translateX(-60%);
+          transform: rotate(0) translateY(calc($distance/10)*10) translateX($translateX);
         }
         10%{
-            transform: rotate($start) translateY(calc($distance/10)*9) translateX(-60%);
+            transform: rotate($start) translateY(calc($distance/10)*9) translateX($translateX);
         }
         20%{
-            transform: rotate(0) translateY(calc($distance/10)*8) translateX(-60%);
+            transform: rotate(0) translateY(calc($distance/10)*8) translateX($translateX);
         }
         30% {
-            transform: rotate($end) translateY(calc($distance/10)*7) translateX(-60%);
+            transform: rotate($end) translateY(calc($distance/10)*7) translateX($translateX);
         }
         40% {
-            transform: rotate(0) translateY(calc($distance/10)*6) translateX(-60%);
+            transform: rotate(0) translateY(calc($distance/10)*6) translateX($translateX);
         }
         50%{
-            transform: rotate($start) translateY(calc($distance/10)*5) translateX(-60%);
+            transform: rotate($start) translateY(calc($distance/10)*5) translateX($translateX);
         }
         60%{
-            transform: rotate(0) translateY(calc($distance/10)*4) translateX(-60%);
+            transform: rotate(0) translateY(calc($distance/10)*4) translateX($translateX);
         }
         70% {
-            transform: rotate($end) translateY(calc($distance/10)*3) translateX(-60%);
+            transform: rotate($end) translateY(calc($distance/10)*3) translateX($translateX);
         }
         80%{
-            transform: rotate(0) translateY(calc($distance/10)*2) translateX(-60%);
+            transform: rotate(0) translateY(calc($distance/10)*2) translateX($translateX);
         }
         90%{
-            transform: rotate(0) translateY(calc($distance/10)) translateX(-60%);
+            transform: rotate(0) translateY(calc($distance/10)) translateX($translateX);
         }
         100%{
-            transform: rotate(0) translateY(calc($distance/10)) translateX(-60%);
+            //transform: rotate(0) translateY(calc($distance/10-$distance/20)) translateX($translateX);
+            transform: rotate(0) translateY(calc($distance / 10 - $distance / 20)) translateX($translateX);
         }
       }
-    animation: #{$animationName} $time ease-in-out;
+    animation: #{$animationName} $time ease-in-out forwards;
 }
 
 @mixin fallDown($animationName,$time,$distance){
@@ -181,4 +182,93 @@
         }
       }
     animation: #{$animationName} $time ease-in-out infinite;
+}
+
+@mixin disappear($animationName, $time){
+    @keyframes #{$animationName}{
+        0%{
+            display: block;
+            opacity: 1;
+        }
+        50%{
+            opacity: 1; 
+        }
+        100%{
+            display: none;
+            opacity: 0;
+            z-index: -1000000000;
+        }
+    }
+    animation: #{$animationName} $time ease-in-out forwards;
+}
+
+@mixin fastDisappear($animationName, $time){
+    @keyframes #{$animationName}{
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    animation: #{$animationName} $time ease-in-out infinite;
+}
+
+//appear in the screen 
+@mixin screenView($animationName, $time, $position1, $position2, $position3, $position4, $left-or-top, $startPosition){
+    @keyframes #{$animationName}{
+        from{
+            transform: translateX($position1) translateY($position3);
+            #{$left-or-top}: $startPosition;
+        }
+        to{
+            transform: translateX($position2)translateY($position4);
+            @if $left-or-top == top {
+                #{$left-or-top}: $position4;
+            } @else{
+                #{$left-or-top}: $position2;
+            }
+        }
+    }
+    animation: #{$animationName} $time ease-in-out forwards;
+}
+
+@mixin blooper($animationName,$time,$start,$end, $distance, $translateX, $delay){
+    @keyframes #{$animationName} {
+        0% {
+            transform: rotate(0) translateY(calc($distance / 10 - $distance / 20)) translateX($translateX);
+        }
+        10%{
+            transform: rotate(0) translateY(calc($distance/10)*1) translateX($translateX);
+        }
+        20%{
+            transform: rotate(0) translateY(calc($distance/10)*2) translateX($translateX);
+        }
+        30% {
+            transform: rotate(0) translateY(calc($distance/10)*3) translateX($translateX);
+        }
+        40% {
+            transform: rotate(0) translateY(calc($distance/10)*4) translateX($translateX);
+        }
+        50%{
+            transform: rotate($start) translateY(calc($distance/10)*5) translateX($translateX);
+        }
+        60%{
+            transform: rotate(0) translateY(calc($distance/10)*6) translateX($translateX);
+        }
+        70% {
+            transform: rotate($end) translateY(calc($distance/10)*7) translateX($translateX);
+        }
+        80%{
+            transform: rotate($end) translateY(calc($distance/10)*8) translateX($translateX);
+        }
+        90%{
+            transform: rotate($start) translateY(calc($distance/10)*9) translateX($translateX);
+        }
+        100%{
+            transform: rotate(0) translateY(calc($distance/10)*10) translateX($translateX);
+        }
+      }
+    animation: #{$animationName} $time ease-in-out forwards;
+    //animation-delay: $delay;
 }

@@ -55,11 +55,29 @@ import seaweed from '../../public/seaweed.svg'
 import spikes from '../../public/spikes.svg'
 import bubble1 from '../../public/bubble1.svg'
 import bubble2 from '../../public/bubble2.svg'
+//languages
+import css from '../../public/css.svg'
+import html from '../../public/html.svg'
+import sass from '../../public/sass.svg'
+import mySql from '../../public/mySql.svg'
+import reactImg from '../../public/React.svg'
+import next from '../../public/next.svg'
+import javascript from '../../public/javascript.svg'
 
+//blooper
+import blooperBody from '../../public/blooper/blooperBody.svg'
+import blooperEye from '../../public/blooper/blooperEye.svg'
+import blooperEyeKill from '../../public/blooper/blooperEyeKill.svg'
+import blooperEyeKill2 from '../../public/blooper/blooperEyeKill2.svg'
+import tentacule from '../../public/blooper/tentacule.svg'
+import tentaculeClose from '../../public/blooper/tentaculeClose.svg'
+import tentaculePink from '../../public/blooper/tentaculePink.svg'
+import tentaculePinkKill from '../../public/blooper/tentaculePinkKill.svg'
 
 
 export { MARIANA, PALACIOS, background_1, start, pipeline1, fire, blueLines ,backgroundSmall1, blueLinesSmall, fish, fishFlip, lakitu, gombaFlyBlue, 
     gombaBlue, piranhaYellow, piranhaYellowLeft, piranhaYellowRight, gomba, gombaFly, branch, coin, chomp, background2, backgroundLeft2,
     cloud, cloudSmall, koopa, koopaFly, bombOmb, pipelineBomb, gombaFlip, mario, background3, seaweed, spikes, bubble1, bubble2, backgroundTextBlue, PButton,
-    backgroundBlue, chainLink, wood
+    backgroundBlue, chainLink, wood, css, html, sass, mySql, reactImg, next, javascript, blooperBody, blooperEye, blooperEyeKill, blooperEyeKill2, 
+    tentacule, tentaculeClose, tentaculePink, tentaculePinkKill
 };

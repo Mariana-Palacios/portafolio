@@ -1,48 +1,18 @@
-/*import React, { useRef, useState, useEffect} from 'react';
+import { useState, useRef, useEffect } from 'react';
 
-function containerPosition() {
-
-  const containerRef = useRef({});
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  function scrolUp(event) {
-    if(event.target.scrollTop){
-        setScrollPosition(true)
-    }
-    else{
-        setScrollPosition(false)
-    }
-  }
+const containerPosition = () => {
+  const refObject = useRef();
+  const [object, setObject] = useState({x:0, y:0, width: 0, height: 0, top: 0, right: 0, bottom: 0, left: 0});
 
   useEffect(() => {
-    window.addEventListener("scrollTop", scrolUp);
-    return () => {
-      window.removeEventListener("scrollTop", scrolUp);
-    };
-  }, []); 
+    if (refObject.current) {
+        setInterval(()=>{
+            setObject(refObject.current.getBoundingClientRect());
+        },1000)
+    }
+  }, [refObject]);
 
-  console.log(scrollPosition)
-  if (containerRef.current && scrollPosition) {
-    const containerRect = containerRef.current.getBoundingClientRect();
-    console.log(containerRect)
-    return containerRect;
-  }
-}
+  return [object, refObject];
+};
 
-export default containerPosition;
-*/
-
-import React, { useState } from 'react';
-
-function containerPosition() {
-    const [scrollTop, setScrollTop] = useState(0);
-
-    const handleScroll = (event) => {
-      setScrollTop(event.currentTarget.scrollTop);
-      console.log(scrollTop)
-    };
-
-    return handleScroll;
-  
-}
 export default containerPosition;
