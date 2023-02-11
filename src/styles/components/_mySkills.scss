@@ -166,6 +166,8 @@
             @include sideBySide(tentacule,3s,-3vw);
             &-1,&-2,&-3,&-4{
                 position: absolute;
+                width: 8vw;
+                height: auto;
             }
             &-1{
                 right: 0;
@@ -207,10 +209,28 @@
             }
         }
         .blooper{
-            //@include blooper(blooper,3s,1deg,-1deg,-25vh,-50%, 3s);
             @include blooper(blooper,3s,1deg,-1deg,-55vw,-50%, 3s);
             &__body{
                 width: 45vw;
+            }
+            &__tentacule{
+                &-1,&-2,&-3,&-4{
+                    position: absolute;
+                    width: 10vw;
+                    height: auto;
+                }
+                &-1{
+                    bottom: -55vw;
+                }
+                &-2{
+                    bottom: -55vw;
+                }
+                &-3{
+                    bottom: -53.5vw;
+                }
+                &-4{
+                    bottom: -53.5vw;
+                }
             }
         }
     }

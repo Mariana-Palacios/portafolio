@@ -4,11 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import {userMove, imageSlider, screenSize, containerPosition} from '../../hooks/hooks'
-import Level from '../components/level'
+import {Blooper, Level} from '../../app/components/components'
 
 import {mario, background3, seaweed, spikes, bubble1, bubble2, fish,
-    css, html, sass, mySql, reactImg, next, javascript, blooperBody, blooperEye, blooperEyeKill, blooperEyeKill2, 
-    tentacule, tentaculeClose, tentaculePink, tentaculePinkKill} from '../../app/images'
+    css, html, sass, mySql, reactImg, next, javascript} from '../../app/images'
 import { MdOutlineTouchApp  } from "react-icons/md";
 import { HiOutlineCursorClick } from "react-icons/hi";
 
@@ -213,44 +212,13 @@ export default function Home() {
 
             {/*Fish line 3*/}
 
-            <div className='blooper'>
-                <Image
-                    src={blooperBody}
-                    className={'blooper__body'}
-                />
-                <Image
-                    src={blooperEye}
-                    className={'blooper__eye blooper__eye-1'}
-                />
-                <Image
-                    src={blooperEye}
-                    className={'blooper__eye blooper__eye-2'}
-                />
-                <div className='blooper__tentacule'>
-                    <Image
-                        src={tentaculePink}
-                        className={'blooper__tentacule-1'}
-                    />
-                    <Image
-                        src={tentaculePink}
-                        className={'blooper__tentacule-2'}
-                    />
-                    <Image
-                        src={tentaculePink}
-                        className={'blooper__tentacule-3'}
-                    />
-                    <Image
-                        src={tentaculePink}
-                        className={'blooper__tentacule-4'}
-                    />
-                </div>
-            </div>
             <Image
                 src={background3}
                 alt='background3'
                 className='background3'
                 ref={refObject}
             />
+            <Blooper/>
         </main>  
     )
 }

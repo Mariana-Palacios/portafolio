@@ -2122,6 +2122,8 @@
 }
 .mySkills .blooper__tentacule-1, .mySkills .blooper__tentacule-2, .mySkills .blooper__tentacule-3, .mySkills .blooper__tentacule-4 {
   position: absolute;
+  width: 8vw;
+  height: auto;
 }
 .mySkills .blooper__tentacule-1 {
   right: 0;
@@ -2324,6 +2326,23 @@
   }
   .mySkills .blooper__body {
     width: 45vw;
+  }
+  .mySkills .blooper__tentacule-1, .mySkills .blooper__tentacule-2, .mySkills .blooper__tentacule-3, .mySkills .blooper__tentacule-4 {
+    position: absolute;
+    width: 10vw;
+    height: auto;
+  }
+  .mySkills .blooper__tentacule-1 {
+    bottom: -55vw;
+  }
+  .mySkills .blooper__tentacule-2 {
+    bottom: -55vw;
+  }
+  .mySkills .blooper__tentacule-3 {
+    bottom: -53.5vw;
+  }
+  .mySkills .blooper__tentacule-4 {
+    bottom: -53.5vw;
   }
 }
 .level {

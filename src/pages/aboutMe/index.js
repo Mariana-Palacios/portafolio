@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {imageSlider, screenSize} from '../../hooks/hooks'
 
-import Level from '../components/level'
+import Level from '../../app/components/level'
 import {gomba, gombaFlip, gombaFly, branch, coin, chomp, background2, backgroundLeft2, pipeline1, cloud,
      cloudSmall, koopa, koopaFly, bombOmb, pipelineBomb, backgroundTextBlue, backgroundBlue, PButton,
      chainLink, wood} from '../../app/images'

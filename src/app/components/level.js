@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import {userMove, imageSlider, screenSize, containerPosition} from '../../hooks/hooks'
 
-import {mario, background3, seaweed, spikes, bubble1, bubble2, fish} from '../../app/images'
+import {mario, background3, seaweed, spikes, bubble1, bubble2, fish} from '../images'
 
 const Level=(props)=> {
     const {numberLevel,nameSection} = props;
