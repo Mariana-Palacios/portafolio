@@ -12,17 +12,10 @@ import {MARIANA, PALACIOS, background_1, start, pipeline1, fire, blueLines, back
         piranhaYellowRight} from './images'
 
 export default function Home() {
+  const {width, height} = screenSize()
   const [imageIndex, setImageIndex] = useState([MARIANA, PALACIOS, background_1, start, pipeline1, fire, blueLines]);
   //get the size of the screen
-  if (screenSize(1)){
-    if (imageIndex[2] != backgroundSmall1){
-      setImageIndex([MARIANA, PALACIOS, backgroundSmall1, start, pipeline1, fire, blueLinesSmall])
-    }
-  }else{
-    if (imageIndex[2] != background_1){
-      setImageIndex([MARIANA, PALACIOS, background_1, start, pipeline1, fire, blueLines])
-    }
-  }
+
   //follow lakitu
   let followMouseStatus = followMouse()
   return (
@@ -36,12 +29,12 @@ export default function Home() {
       <section className='mainMenu flex flex-f-d-c flex-j-c flex-a-i'>
         <div className='mainMenu__name flex'>
           <Image
-            src={imageIndex[0]}
+            src={MARIANA}
             alt="MARIANA"
             className='mainMenu__name-letter'
           />
           <Image
-            src={imageIndex[1]}
+            src={PALACIOS}
             alt="PALACIOS"
             className='mainMenu__name-letter'
           />
@@ -74,12 +67,12 @@ export default function Home() {
           className='background1__gombaFlyBlue background1__gombaFlyBlue-2' 
         />
         <Image
-          src={imageIndex[6]}
+          src={width>=1000?blueLines:blueLinesSmall}
           alt='blueLines'
           className='background1__blueLines'
         />
         <Image
-          src={imageIndex[3]}
+          src={start}
           alt='start'
           className='background1__start'
         />
@@ -94,22 +87,22 @@ export default function Home() {
           className='background1__piranhaYellow background1__piranhaYellow-2'
         />
         <Image
-          src={imageIndex[4]}
+          src={pipeline1}
           alt='pipeline'
           className='background1__pipeline1 background1__pipeline1-1'
         />
         <Image
-          src={imageIndex[4]}
+          src={pipeline1}
           alt='pipeline'
           className='background1__pipeline1 background1__pipeline1-2'
         />
         <Image
-          src={imageIndex[5]}
+          src={fire}
           alt='pipeline'
           className='background1__fire-1'
         />
         <Image
-          src={imageIndex[5]}
+          src={fire}
           alt='pipeline'
           className='background1__fire-2'
         />
@@ -119,7 +112,7 @@ export default function Home() {
           className='background1__fish'
         />
         <Image
-          src={imageIndex[2]}
+          src={width>=1000? background_1:backgroundSmall1}
           alt="background1"
           className='background1__image'
         />
