@@ -10,6 +10,7 @@ import {mario, background3, seaweed, spikes, bubble1, bubble2, fish,
     css, html, sass, mySql, reactImg, next, javascript} from '../../app/images'
 import { MdOutlineTouchApp  } from "react-icons/md";
 import { HiOutlineCursorClick } from "react-icons/hi";
+import { TbArrowBigRightLines, TbArrowBigLeftLines} from 'react-icons/tb';
 
 export default function Home() {
     const {width, height} = screenSize()
@@ -19,6 +20,10 @@ export default function Home() {
     return (
         <main className='mySkills'>
             <Level numberLevel="2" nameSection="MY SKILLS"/>
+            <div className='arrows flex flex-j-s-b'>
+                <Link href="/aboutMe"><TbArrowBigLeftLines className='arrows__rigth'/></Link>
+                <Link href="/"><TbArrowBigRightLines className='arrows__left'/></Link>
+            </div>
             <section className={`touchClick ${showSkills==='hide'?'':'hide'}`}>
                 <p>Touch <MdOutlineTouchApp/> or hold click<HiOutlineCursorClick /></p>
             </section>

@@ -4,6 +4,18 @@
     width: auto;
     max-height: 100vh;
     overflow-y:hidden;
+    .arrows{
+        position: absolute;
+        width: 100vw;
+        &__left,&__rigth{
+            font-size: $xx-large;
+            background-color: black;
+            color: white;
+        }
+        &__rigth{
+            right: 0;
+        }
+    }
     &__icons{
         position: absolute;
         left: 50%;
@@ -195,6 +207,11 @@
 
 @media (max-width: 1000px) {
     .mySkills{
+        .arrows{
+            &__left,&__rigth{
+                font-size: $medium;
+            }
+        }
         .mario{
             &__chapter{
                 width: 12vw;
@@ -210,6 +227,21 @@
         }
         .blooper{
             @include blooper(blooper,3s,1deg,-1deg,-55vw,-50%, 3s);
+            &__eye{
+                position: absolute;
+                width: 7.5vw;
+                height: auto;
+                &-1{
+                    left: 33%;
+                    margin-top: 70%;
+                    transform: translateX(-33%);
+                }
+                &-2{
+                    left: 72%;
+                    margin-top: 70%;
+                    transform: translateX(-72%);
+                }
+            }
             &__body{
                 width: 45vw;
             }

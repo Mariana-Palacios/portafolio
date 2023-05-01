@@ -3,10 +3,15 @@
     height: 100vh;
     width: auto;
     .arrows{
+        position: absolute;
+        width: 100vw;
         &__left,&__rigth{
             font-size: $xx-large;
             background-color: black;
             color: white;
+        }
+        &__rigth{
+            right: 0;
         }
     }
     .background2{

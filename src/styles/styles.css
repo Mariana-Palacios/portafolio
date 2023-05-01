@@ -31,10 +31,17 @@
   height: 100vh;
   width: auto;
 }
+.aboutMe .arrows {
+  position: absolute;
+  width: 100vw;
+}
 .aboutMe .arrows__left, .aboutMe .arrows__rigth {
   font-size: 70px;
   background-color: black;
   color: white;
+}
+.aboutMe .arrows__rigth {
+  right: 0;
 }
 .aboutMe .background2 {
   position: absolute;
@@ -1317,6 +1324,18 @@
   max-height: 100vh;
   overflow-y: hidden;
 }
+.mySkills .arrows {
+  position: absolute;
+  width: 100vw;
+}
+.mySkills .arrows__left, .mySkills .arrows__rigth {
+  font-size: 70px;
+  background-color: black;
+  color: white;
+}
+.mySkills .arrows__rigth {
+  right: 0;
+}
 .mySkills__icons {
   position: absolute;
   left: 50%;
@@ -1688,6 +1707,9 @@
 }
 
 @media (max-width: 1000px) {
+  .mySkills .arrows__left, .mySkills .arrows__rigth {
+    font-size: 25px;
+  }
   .mySkills .mario__chapter {
     width: 12vw;
   }
@@ -1736,6 +1758,21 @@
     100% {
       transform: rotate(0) translateY(-55vw) translateX(-50%);
     }
+  }
+  .mySkills .blooper__eye {
+    position: absolute;
+    width: 7.5vw;
+    height: auto;
+  }
+  .mySkills .blooper__eye-1 {
+    left: 33%;
+    margin-top: 70%;
+    transform: translateX(-33%);
+  }
+  .mySkills .blooper__eye-2 {
+    left: 72%;
+    margin-top: 70%;
+    transform: translateX(-72%);
   }
   .mySkills .blooper__body {
     width: 45vw;
