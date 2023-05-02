@@ -46,7 +46,7 @@ function userMove(intervalTime,topValue) {
       }
       else{
         setMarioUp(eventActive?(marioUp-1):marioUp)
-        console.log('hola mundo')
+       // console.log('hola mundo')
       }
     }, intervalTime);
     return () => {

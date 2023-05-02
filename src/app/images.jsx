@@ -63,6 +63,9 @@ import mySql from '../../public/mySql.svg'
 import reactImg from '../../public/React.svg'
 import next from '../../public/next.svg'
 import javascript from '../../public/javascript.svg'
+import fastApi from '../../public/fastApi.svg'
+import python from '../../public/python.svg'
+import mongoDb from '../../public/mongoDb.svg'
 
 //blooper
 import blooperBody from '../../public/blooper/blooperBody.svg'
@@ -79,6 +82,6 @@ import tentaculePinkKill from '../../public/blooper/tentaculePinkKill.svg'
 export { MARIANA, PALACIOS, background_1, start, pipeline1, fire, blueLines ,backgroundSmall1, blueLinesSmall, fish, fishFlip, lakitu, gombaFlyBlue, 
     gombaBlue, piranhaYellow, piranhaYellowLeft, piranhaYellowRight, gomba, gombaFly, branch, coin, chomp, background2, backgroundLeft2,
     cloud, cloudSmall, koopa, koopaFly, bombOmb, pipelineBomb, gombaFlip, mario, background3, seaweed, spikes, bubble1, bubble2, backgroundTextBlue, PButton,
-    backgroundBlue, chainLink, wood, css, html, sass, mySql, reactImg, next, javascript, blooperBody, blooperEye, blooperEye2, blooperEyeKill, blooperEyeKill2, 
+    backgroundBlue, chainLink, wood, css, html, sass, mySql, reactImg, next, javascript, fastApi, python, mongoDb, blooperBody, blooperEye, blooperEye2, blooperEyeKill, blooperEyeKill2, 
     tentacule, tentaculeClose, tentaculePink, tentaculePinkKill
 };

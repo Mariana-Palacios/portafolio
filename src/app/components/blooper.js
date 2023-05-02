@@ -6,9 +6,9 @@ import {imageSlider} from '../../hooks/hooks'
 import { blooperBody, blooperEye, blooperEye2, blooperEyeKill, blooperEyeKill2, 
     tentacule, tentaculeClose, tentaculePink, tentaculePinkKill} from '../images'
 
-const Blooper=()=> {
+const Blooper=({tentaculeLife, setTentaculeLife})=> {
     //const {numberBlooper,nameSection} = props;
-    const [tentaculeLife, setTentaculeLife] = useState([0, 0, 0, 0])
+    
     const [damageState, setDamageState] =useState(false)
     const lifeChanger = (positionArray) => {
         let lifeAuxilar = [...tentaculeLife];
@@ -17,10 +17,11 @@ const Blooper=()=> {
     };
 
     useEffect(()=>{
-        setTimeout(() => {
+        const interval = setTimeout(() => {
             setDamageState((prevState) => !prevState);
-        }, 2000);
+        }, 500);
         setDamageState((prevState) => !prevState);
+        return () => clearInterval(interval);
     },[tentaculeLife])
     return (
         <div className={tentaculeLife[0]==1&&tentaculeLife[1]==1&&tentaculeLife[2]==1&&tentaculeLife[3]==1?'hide':'blooper'}>
@@ -29,11 +30,11 @@ const Blooper=()=> {
                 className={'blooper__body'}
             />
             <Image
-                src={damageState?(imageSlider(100)?blooperEyeKill:blooperEyeKill2):(imageSlider(1500)?blooperEye:blooperEye2)}
+                src={damageState?(imageSlider(1000)?blooperEyeKill:blooperEyeKill2):(imageSlider(1500)?blooperEye:blooperEye2)}
                 className={'blooper__eye blooper__eye-1'}
             />
             <Image
-                src={damageState?(imageSlider(100)?blooperEyeKill:blooperEyeKill2):(imageSlider(1500)?blooperEye:blooperEye2)}
+                src={damageState?(imageSlider(1000)?blooperEyeKill:blooperEyeKill2):(imageSlider(1500)?blooperEye:blooperEye2)}
                 className={'blooper__eye blooper__eye-2'}
             />
             <div className='blooper__tentacule'>

@@ -1320,9 +1320,11 @@
 .mySkills {
   background-color: #192EEA;
   height: 100vh;
-  width: auto;
+  width: 100vw;
   max-height: 100vh;
   overflow-y: hidden;
+  position: relative;
+  overflow: hidden;
 }
 .mySkills .arrows {
   position: absolute;
@@ -1337,16 +1339,105 @@
   right: 0;
 }
 .mySkills__icons {
-  position: absolute;
-  left: 50%;
-  top: 10%;
-  transform: translate(-50%, -10%);
+  position: relative;
   z-index: 1000000;
+  height: 100vh;
+  width: auto;
 }
 .mySkills__icons .icon {
-  height: auto;
+  top: 10%;
+  position: absolute;
   width: 4vw;
   margin: 10px;
+}
+.mySkills__icons .icon-l-r {
+  animation: icon1 3s ease-in-out forwards;
+}
+@keyframes icon1 {
+  from {
+    transform: translateX(100%) translateY(0);
+    left: 0%;
+  }
+  to {
+    transform: translateX(30%) translateY(0);
+    left: 30%;
+  }
+}
+.mySkills__icons .icon-l-l {
+  animation: icon2 3s ease-in-out forwards;
+}
+@keyframes icon2 {
+  from {
+    transform: translateX(100%) translateY(0);
+    left: 0%;
+  }
+  to {
+    transform: translateX(35%) translateY(0);
+    left: 35%;
+  }
+}
+.mySkills__icons .icon-r-r {
+  animation: icon6 3s ease-in-out forwards;
+}
+@keyframes icon6 {
+  from {
+    transform: translateX(0%) translateY(0);
+    left: 100%;
+  }
+  to {
+    transform: translateX(60%) translateY(0);
+    left: 60%;
+  }
+}
+.mySkills__icons .icon-r-l {
+  animation: icon7 3s ease-in-out forwards;
+}
+@keyframes icon7 {
+  from {
+    transform: translateX(0%) translateY(0);
+    left: 100%;
+  }
+  to {
+    transform: translateX(65%) translateY(0);
+    left: 65%;
+  }
+}
+.mySkills__icons .icon-1 {
+  top: 10%;
+}
+.mySkills__icons .icon-2 {
+  top: 15%;
+}
+.mySkills__icons .icon-3 {
+  top: 20%;
+}
+.mySkills__icons .icon-4 {
+  top: 25%;
+  transform: translateY(-25%);
+}
+.mySkills__icons .icon-5 {
+  top: 30%;
+  transform: translateY(-30%);
+}
+.mySkills__icons .icon-6 {
+  top: 35%;
+  transform: translateY(-35%);
+}
+.mySkills__icons .icon-7 {
+  top: 25%;
+  transform: translateY(-25%);
+}
+.mySkills__icons .icon-8 {
+  top: 30%;
+  transform: translateY(-30%);
+}
+.mySkills__icons .icon-9 {
+  top: 35%;
+  transform: translateY(-35%);
+}
+.mySkills__icons .icon-10 {
+  top: 40%;
+  transform: translateY(-40%);
 }
 .mySkills .touchClick {
   position: absolute;
@@ -1450,109 +1541,6 @@
   100% {
     transform: translateY(-3vw);
   }
-}
-.mySkills .fish {
-  position: absolute;
-}
-.mySkills .fish-1 {
-  animation: fish1 3s ease-in-out forwards;
-}
-@keyframes fish1 {
-  from {
-    transform: translateX(100%) translateY(0);
-    left: 0%;
-  }
-  to {
-    transform: translateX(35%) translateY(0);
-    left: 35%;
-  }
-}
-.mySkills .fish-2 {
-  animation: fish2 3s ease-in-out forwards;
-}
-@keyframes fish2 {
-  from {
-    transform: translateX(100%) translateY(0);
-    left: 0%;
-  }
-  to {
-    transform: translateX(40%) translateY(0);
-    left: 40%;
-  }
-}
-.mySkills .fish-3 {
-  animation: fish3 3s ease-in-out forwards;
-}
-@keyframes fish3 {
-  from {
-    transform: translateX(100%) translateY(0);
-    left: 0%;
-  }
-  to {
-    transform: translateX(45%) translateY(0);
-    left: 45%;
-  }
-}
-.mySkills .fish-4 {
-  animation: fish4 3s ease-in-out forwards;
-}
-@keyframes fish4 {
-  from {
-    transform: translateX(100%) translateY(0);
-    left: 0%;
-  }
-  to {
-    transform: translateX(50%) translateY(0);
-    left: 50%;
-  }
-}
-.mySkills .fish-5 {
-  animation: fish5 3s ease-in-out forwards;
-}
-@keyframes fish5 {
-  from {
-    transform: translateX(100%) translateY(0);
-    left: 0%;
-  }
-  to {
-    transform: translateX(55%) translateY(0);
-    left: 55%;
-  }
-}
-.mySkills .fish-6 {
-  animation: fish6 3s ease-in-out forwards;
-}
-@keyframes fish6 {
-  from {
-    transform: translateX(100%) translateY(0);
-    left: 0%;
-  }
-  to {
-    transform: translateX(60%) translateY(0);
-    left: 60%;
-  }
-}
-.mySkills .fish-7 {
-  animation: fish7 3s ease-in-out forwards;
-}
-@keyframes fish7 {
-  from {
-    transform: translateX(100%) translateY(0);
-    left: 0%;
-  }
-  to {
-    transform: translateX(65%) translateY(0);
-    left: 65%;
-  }
-}
-.mySkills .fishLine1 {
-  top: 20vh;
-}
-.mySkills .fishLine2 {
-  top: 25vh;
-}
-.mySkills .fishLine3 {
-  top: 30vh;
 }
 .mySkills .blooper {
   position: relative;
@@ -1720,6 +1708,91 @@
   .mySkills .mario__bubble2 {
     left: 10vw;
     width: 0.8vw;
+  }
+  .mySkills__icons .icon {
+    width: 12vw;
+  }
+  .mySkills__icons .icon-l-r {
+    animation: icon1 3s ease-in-out forwards;
+  }
+  @keyframes icon1 {
+    from {
+      transform: translateX(100%) translateY(0);
+      left: 0%;
+    }
+    to {
+      transform: translateX(10%) translateY(0);
+      left: 10%;
+    }
+  }
+  .mySkills__icons .icon-l-l {
+    animation: icon2 3s ease-in-out forwards;
+  }
+  @keyframes icon2 {
+    from {
+      transform: translateX(100%) translateY(0);
+      left: 0%;
+    }
+    to {
+      transform: translateX(20%) translateY(0);
+      left: 20%;
+    }
+  }
+  .mySkills__icons .icon-r-r {
+    animation: icon6 3s ease-in-out forwards;
+  }
+  @keyframes icon6 {
+    from {
+      transform: translateX(0%) translateY(0);
+      left: 100%;
+    }
+    to {
+      transform: translateX(60%) translateY(0);
+      left: 60%;
+    }
+  }
+  .mySkills__icons .icon-r-l {
+    animation: icon7 3s ease-in-out forwards;
+  }
+  @keyframes icon7 {
+    from {
+      transform: translateX(0%) translateY(0);
+      left: 100%;
+    }
+    to {
+      transform: translateX(70%) translateY(0);
+      left: 70%;
+    }
+  }
+  .mySkills__icons .icon-1 {
+    top: 10%;
+  }
+  .mySkills__icons .icon-2 {
+    top: 20%;
+  }
+  .mySkills__icons .icon-3 {
+    top: 30%;
+  }
+  .mySkills__icons .icon-4 {
+    top: 40%;
+  }
+  .mySkills__icons .icon-5 {
+    top: 50%;
+  }
+  .mySkills__icons .icon-6 {
+    top: 60%;
+  }
+  .mySkills__icons .icon-7 {
+    top: 50%;
+  }
+  .mySkills__icons .icon-8 {
+    top: 60%;
+  }
+  .mySkills__icons .icon-9 {
+    top: 70%;
+  }
+  .mySkills__icons .icon-10 {
+    top: 80%;
   }
   .mySkills .blooper {
     animation: blooper 3s ease-in-out forwards;
